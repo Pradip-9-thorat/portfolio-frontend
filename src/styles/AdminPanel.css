@@ -1,0 +1,83 @@
+/* AdminPanel.css */
+
+.admin-container {
+  padding: 40px;
+  max-width: 450px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid #04f2ff;
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.362);
+}
+
+.admin-container h2 {
+  text-align: center;
+  color: #00e6ff;
+  margin-bottom: 30px;
+  text-shadow: 0 0 8px #00e6ff;
+}
+
+.admin-form {
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.admin-form input,
+.admin-form textarea {
+  padding: 10px;
+  border: 1px solid #00e6ff;
+  border-radius: 8px;
+  background-color: transparent;
+  color: white;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.admin-form input:focus,
+.admin-form textarea:focus {
+  border-color: #00e6ff;
+  box-shadow: 0 0 8px #04f665;
+}
+
+.admin-form button {
+  padding: 12px;
+  background-color: #00e6ff;
+  color: black;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.admin-form button:hover {
+  background-color: #06f4f4;
+  box-shadow: 0 0 12px #03f7aa;
+}
+/* Animation Keyframes */
+@keyframes slideFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Add animation to the container */
+.admin-container {
+  padding: 40px;
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid #00e6ff;
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
+
+  /* 👇 Add animation here */
+  animation: slideFadeIn 0.8s ease forwards;
+}

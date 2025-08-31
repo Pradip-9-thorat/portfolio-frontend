@@ -1,0 +1,234 @@
+/* Global */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  background: url('../assets/images/hero-bg.jpg') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  animation: slideIn 1.5s ease forwards;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+.overlay h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.overlay p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #eee;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+}
+
+.btn-glow {
+  padding: 12px 30px;
+  font-size: 1rem;
+  background: transparent;
+  color: #00f0ff;
+  border: 2px solid #00f0ff;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+
+.btn-glow:hover {
+  background: #00f0ff;
+  color: #000;
+  box-shadow: 0 0 20px #00f0ff, 0 0 40px #00f0ff inset;
+}
+
+/* Services Section */
+.services-section {
+  background: linear-gradient(to bottom, #000, #001f1f);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.services-section h2 {
+  font-size: 2rem;
+  color: #00e6ff;
+  text-shadow: 0 0 10px #00e6ff;
+  margin-bottom: 40px;
+}
+
+.service-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(141, 5, 238, 0.927);
+  border-radius: 16px;
+  padding: 20px 30px;
+  min-width: 200px;
+  font-size: 1.1rem;
+  backdrop-filter: blur(8px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 0 20px rgb(149, 1, 255);
+}
+
+/* Quick Navigation Cards */
+.quick-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding: 60px 20px;
+  background: #000;
+}
+
+.quick-card {
+  background: rgba(0, 255, 255, 0.05);
+  border: 1px solid rgba(78, 237, 25, 0.679);
+  border-radius: 18px;
+  padding: 20px;
+  width: 160px;
+  text-align: center;
+  cursor: pointer;
+  color: #00e6ff;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.1);
+}
+
+.quick-card:hover {
+  background: rgba(0, 255, 255, 0.15);
+  box-shadow: 0 0 25px rgb(2, 255, 179);
+  transform: scale(1.05);
+}
+
+.quick-card p {
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+/* Social Media Icons */
+.social-links {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.social-links a {
+  color: #00f0ff;
+  text-decoration: none;
+  font-size: 28px;
+  margin: 0 12px;
+  transition: transform 0.2s ease;
+}
+
+.social-links a:hover {
+  transform: scale(1.2);
+  text-decoration: none;
+  color:#ffffff;
+}
+
+/* Footer */
+.footer {
+  background: rgba(0, 0, 0, 0.95);
+  padding: 20px 40px;
+  text-align: center;
+  color: #aaa;
+  border-top: 1px solid rgba(0, 255, 255, 0.1);
+  font-size: 0.9rem;
+}
+
+.footer span {
+  color: #00f0ff;
+  text-shadow: 0 0 8px #00f0ff;
+}
+
+/* Animation */
+@keyframes slideIn {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.neon-text {
+  font-size: 4rem;
+  font-weight: bold;
+  color: black; /* Text fill color */
+  position: relative;
+  text-transform: uppercase;
+
+  /* Transparent text with stroke */
+  -webkit-text-stroke: 2px transparent;
+  color: transparent;
+
+  /* Apply animated gradient to stroke */
+  background: linear-gradient(
+    90deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00ab,
+    #ff0000
+  );
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  /* For stroke visibility */
+  -webkit-text-stroke: 2px #000; /* Black fallback */
+  
+  animation: neonStroke 6s linear infinite;
+}
+
+@keyframes neonStroke {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .overlay h1 {
+    font-size: 2.2rem;
+  }
+
+  .service-cards,
+  .quick-links {
+    flex-direction: column;
+    align-items: center;
+  }
+}

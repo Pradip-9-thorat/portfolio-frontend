@@ -1,0 +1,94 @@
+/* Base Reset & Font */
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: black;
+  background-image: radial-gradient(circle at center, rgba(0, 255, 255, 0.05), transparent 70%);
+  color: white;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* Link reset */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Headings */
+h1, h2, h3, h4 {
+  color: #00e6ff;
+  text-shadow: 0 0 8px rgba(0, 255, 255, 0.3);
+  margin: 0;
+}
+
+/* Buttons default */
+button {
+  font-family: inherit;
+  cursor: pointer;
+  background-color: transparent;
+  color: #00e6ff;
+  border: 1px solid #00e6ff;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #00e6ff;
+  color: black;
+  box-shadow: 0 0 12px #00e6ff;
+}
+
+/* Utility Classes */
+.container {
+  padding: 20px 40px;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Neon Text */
+.neon-text {
+  color: #00e6ff;
+  text-shadow: 0 0 10px #00e6ff, 0 0 20px rgba(0, 255, 255, 0.4);
+}
+
+/* Fade Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Scrollbar Custom */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: #00e6ff;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+/* Responsive Typography */
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+  h2 {
+    font-size: 1.4rem;
+  }
+  button {
+    padding: 6px 12px;
+  }
+  .container {
+    padding: 10px 20px;
+  }
+}

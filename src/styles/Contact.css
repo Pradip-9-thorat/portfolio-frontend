@@ -1,0 +1,71 @@
+/* Contact Container - Centered Layout */
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  animation: fadeIn 0.6s ease-in;
+}
+
+/* Contact Form Box */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 420px;
+  background-color: rgba(255, 192, 203, 0.05);
+  padding: 24px;
+  border-radius: 16px;
+  border: 1px solid #63fb95;
+  box-shadow: 0 0 20px rgb(105, 230, 255);
+}
+
+/* Input Fields */
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #63fb95;
+  background: transparent;
+  color: white;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  box-shadow: 0 0 10px #05ffe6;
+}
+
+/* Button */
+.contact-form button {
+  background-color: transparent;
+  color: #63fb95;
+  transition: 0.3s;
+}
+
+.contact-form h2 {
+  text-align: center;
+  color: #63fb95;
+  margin-bottom: 30px;
+  text-shadow: 0 0 8px #05ffe6;
+}
+
+.contact-form button:hover {
+  background-color: #63fb95;
+  color: black;
+  box-shadow: 0 0 15px #05ffe6;
+}
+
+/* Optional FadeIn Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

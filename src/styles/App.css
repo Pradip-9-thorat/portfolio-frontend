@@ -5,10 +5,33 @@ body, html, #root {
   height: 100%;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: black;
-  background-image: radial-gradient(circle at center, rgba(0, 255, 255, 0.05), transparent 70%);
   color: white;
-  scroll-behavior: smooth;
   overflow-x: hidden;
+  position: relative;
+  scroll-behavior: smooth;
+}
+
+/* Smoke background using ::before */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at 30% 30%, rgba(0, 255, 255, 0.05), transparent 70%),
+              radial-gradient(circle at 70% 70%, rgba(0, 255, 255, 0.05), transparent 70%),
+              radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.03), transparent 80%);
+  animation: smokeMove 25s linear infinite;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+/* Smoke animation */
+@keyframes smokeMove {
+  0% { transform: translate(-10%, -10%) scale(1); }
+  50% { transform: translate(10%, 10%) scale(1.1); }
+  100% { transform: translate(-10%, -10%) scale(1); }
 }
 
 /* Link reset */
@@ -91,4 +114,28 @@ button:hover {
   .container {
     padding: 10px 20px;
   }
+}
+/* ===========================
+   Smoke Background
+=========================== */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at 25% 25%, rgba(0,255,255,0.12), transparent 70%),
+              radial-gradient(circle at 75% 75%, rgba(0,255,255,0.12), transparent 70%),
+              radial-gradient(circle at 50% 50%, rgba(255,255,255,0.07), transparent 80%);
+  animation: smokeMove 35s linear infinite;
+  z-index: -10;       /* behind everything */
+  opacity: 0.6;       /* semi-transparent smoke */
+  pointer-events: none; /* allows clicks through smoke */
+}
+
+@keyframes smokeMove {
+  0% { transform: translate(-15%, -15%) scale(1); }
+  50% { transform: translate(15%, 15%) scale(1.05); }
+  100% { transform: translate(-15%, -15%) scale(1); }
 }

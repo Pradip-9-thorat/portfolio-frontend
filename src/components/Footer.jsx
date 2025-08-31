@@ -10,7 +10,7 @@ const Footer = () => {
         <p>Crafting modern websites with React, Spring Boot & MySQL</p>
 
         <div className="social-icons">
-          <a href="https://github.com/pradipthorat" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://github.com/Pradip-9-thorat" target="_blank" rel="noopener noreferrer">GitHub</a>
           <a href="https://linkedin.com/in/pradipthorat" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           <a href="mailto:pradip@example.com">Email</a>
         </div>

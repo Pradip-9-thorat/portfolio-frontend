@@ -47,6 +47,37 @@ body {
   border-radius: 30px;
   cursor: pointer;
   transition: 0.4s ease;
+    background:inline-block;
+  color: transparent;
+  -webkit-text-stroke: 2px transparent;
+  background: linear-gradient(
+    90deg,
+    #ff0000,
+    #ff6a00,
+    #ffe100,
+    #00ff62,
+    #00ffff,
+    #008cff,
+    #9900ff,
+    #ff00bf,
+    #9f3232
+  );
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  animation: neonFlow 10s linear infinite;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.2),
+               0 0 20px rgba(255, 255, 255, 0.3),
+               0 0 40px rgba(0, 255, 255, 0.3);
+;
+  border-radius: 16px;
+  padding: 20px 30px;
+  min-width: 200px;
+  font-size: 1.1rem;
+  backdrop-filter: blur(8px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
 }
 
 .btn-glow:hover {
@@ -77,7 +108,30 @@ body {
 }
 
 .card {
-  background: rgba(255, 255, 255, 0.05);
+  background:inline-block;
+  color: transparent;
+  -webkit-text-stroke: 2px transparent;
+  background: linear-gradient(
+    90deg,
+    #ff0000,
+    #ff6a00,
+    #ffe100,
+    #00ff62,
+    #00ffff,
+    #008cff,
+    #9900ff,
+    #ff00bf,
+    #9f3232
+  );
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  animation: neonFlow 10s linear infinite;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.2),
+               0 0 20px rgba(255, 255, 255, 0.3),
+               0 0 40px rgba(0, 255, 255, 0.3);
+;
   border: 1px solid rgba(141, 5, 238, 0.927);
   border-radius: 16px;
   padding: 20px 30px;
@@ -117,9 +171,11 @@ body {
 }
 
 .quick-card:hover {
+  
   background: rgba(0, 255, 255, 0.15);
   box-shadow: 0 0 25px rgb(2, 255, 179);
   transform: scale(1.05);
+  
 }
 
 .quick-card p {
@@ -173,40 +229,52 @@ body {
     opacity: 1;
   }
 }
-
+/* 🌈 Neon Animated Text */
 .neon-text {
   font-size: 4rem;
-  font-weight: bold;
-  color: black; /* Text fill color */
-  position: relative;
+  font-weight: 800;
   text-transform: uppercase;
-
-  /* Transparent text with stroke */
-  -webkit-text-stroke: 2px transparent;
+  display: inline-block;
   color: transparent;
+  position: relative;
+  letter-spacing: 3px;
+  margin-bottom: 1rem;
+}
 
-  /* Apply animated gradient to stroke */
+.neon-text span {
+  display: inline-block;
+  color: transparent;
+  -webkit-text-stroke: 2px transparent;
   background: linear-gradient(
     90deg,
     #ff0000,
-    #ff7300,
-    #fffb00,
-    #48ff00,
-    #00ffd5,
-    #002bff,
-    #7a00ff,
-    #ff00ab,
-    #ff0000
+    #ff6a00,
+    #ffe100,
+    #00ff62,
+    #00ffff,
+    #008cff,
+    #9900ff,
+    #ff00bf,
+    #9f3232
   );
   background-size: 300% 300%;
   -webkit-background-clip: text;
   background-clip: text;
 
-  /* For stroke visibility */
-  -webkit-text-stroke: 2px #000; /* Black fallback */
-  
-  animation: neonStroke 6s linear infinite;
+  animation: neonFlow 5s linear infinite;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.2),
+               0 0 20px rgba(255, 255, 255, 0.3),
+               0 0 40px rgba(0, 255, 255, 0.3);
 }
+
+/* Flow animation */
+@keyframes neonFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Delay for wave effect */
 
 @keyframes neonStroke {
   0% {

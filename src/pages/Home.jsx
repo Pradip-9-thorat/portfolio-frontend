@@ -1,27 +1,34 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import { FaLinkedin, FaInstagram, FaEnvelope, FaCode, FaUser} from 'react-icons/fa';
+import { FaLinkedin, FaInstagram, FaEnvelope, FaCode, FaUser } from 'react-icons/fa';
 import '../styles/Home.css';
 
-
 const Home = () => {
+  const neonText = "Welcome to Pradip's Freelancing World";
+
   return (
     <div className="home-container">
       {/* Hero Section */}
       <section className="hero">
         <div className="overlay">
-          <h1 className='neon-title'>Welcome to Pradip's Freelancing World</h1>
+          {/* 🌈 Neon Animated Title */}
+          <h1 className='neon-text'>
+            {neonText.split("").map((char, index) => (
+              <span key={index}>{char === " " ? "\u00A0" : char}</span>
+            ))}
+          </h1>
+
           <p>I empower businesses with modern and scalable web solutions.</p>
-           <p>
-              I build modern web apps using <span className="highlight">Java</span>,{' '}
-              <span className="highlight">Spring Boot</span>, and{' '}
-              <span className="highlight">React</span>.
-            </p>
+          <p>
+            I build modern web apps using <span className="highlight">Java</span>,{' '}
+            <span className="highlight">Spring Boot</span>, and{' '}
+            <span className="highlight">React</span>.
+          </p>
           <a href="#services"><button className="btn-glow">Explore Services</button></a>
         </div>
       </section>
 
-      {/* Services */}
+      {/* Services Section */}
       <section id="services" className="services-section">
         <h2>My Freelancing Services</h2>
         <div className="service-cards">
@@ -29,10 +36,10 @@ const Home = () => {
           <div className="card">React UI Design</div>
           <div className="card">Admin Dashboards</div>
           <div className="card">Bug Fixing</div>
-          {/* <div className="card"></div> */}
         </div>
       </section>
-          {/* Quick Navigation Cards */}
+
+      {/* Quick Navigation */}
       <section className="quick-links">
         <div className="quick-card">
           <Link to="/projects">
@@ -53,11 +60,12 @@ const Home = () => {
           </Link>
         </div>
       </section>
+
       {/* Social Icons */}
       <section className="social-links">
         <a href="https://linkedin.com/in/pradip-thorat" target="_blank" rel="noreferrer"><FaLinkedin /></a>
-        <a href="https://instagram.com/pradip_thorat" target="_blank" rel="noreferrer"><FaInstagram /></a>
-        <a href="mailto:pradip9thorat@gmail.com" target="_blank" rel="noopener noreferrer"><FaEnvelope/></a>
+        <a href="https://instagram.com/pradip.thorat_09" target="_blank" rel="noreferrer"><FaInstagram /></a>
+        <a href="mailto:pradip9thorat@gmail.com" target="_blank" rel="noopener noreferrer"><FaEnvelope /></a>
       </section>
     </div>
   );

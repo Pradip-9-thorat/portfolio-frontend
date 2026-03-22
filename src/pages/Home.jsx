@@ -63,7 +63,7 @@ const Home = () => {
 
       {/* Social Icons */}
       <section className="social-links">
-        <a href="https://linkedin.com/in/pradip-thorat" target="_blank" rel="noreferrer"><FaLinkedin /></a>
+        <a href="www.linkedin.com/in/pradip9thorat" target="_blank" rel="noreferrer"><FaLinkedin /></a>
         <a href="https://instagram.com/pradip.thorat_09" target="_blank" rel="noreferrer"><FaInstagram /></a>
         <a href="mailto:pradip9thorat@gmail.com" target="_blank" rel="noopener noreferrer"><FaEnvelope /></a>
       </section>
